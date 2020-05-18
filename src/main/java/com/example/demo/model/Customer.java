@@ -13,7 +13,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonProperty("id")//ustawianie property annotation
+    @JsonProperty("id")
     private int customerId;
     @JsonProperty("firstName")
     private String customerFirstName;
