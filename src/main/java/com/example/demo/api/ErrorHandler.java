@@ -23,7 +23,7 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(CustomerNotFoundException.class)
     public ResponseEntity<ApplicationError> handleCustomerNotFoundException(CustomerNotFoundException exception, WebRequest webRequest){
         ApplicationError error = new ApplicationError();
-        error.setCode(101);
+//        error.setCode(101);
         error.setMessege(exception.getMessage());
         error.setDetails(details);
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
